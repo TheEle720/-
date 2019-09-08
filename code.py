@@ -33,7 +33,7 @@ async def status_task():
         game = discord.Game(str(len(client.guilds)) + "개의 서버안에서" + "관리하는 중..")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(5)
-        game = discord.Game("엘봇은 되게 깜찍한다는 학계의 전설")
+        game = discord.Game("엘봇은 되게 깜찍한다는 학계의 정설")
         await client.change_presence(status=discord.Status.online, activity=game)
         await asyncio.sleep(5)
         game = discord.Game("version 0.3")
@@ -224,5 +224,5 @@ async def on_message(message):
 
 
 
-
-client.run("NjE5MDg3MDY5MjcyMzQyNTM5.XXLs2A.v7oFmYP_UJYUnvkvzqyiDcJaV-M")
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
